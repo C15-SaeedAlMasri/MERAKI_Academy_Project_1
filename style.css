@@ -1,0 +1,29 @@
+body{
+    text-align: center;
+}
+
+
+.countainer{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas: "header" "main" "footer";
+
+}
+#header{
+    background-color: aqua;
+    grid-area: header;
+
+}
+#main{
+    background-color: blue;
+    grid-area: main;
+}
+#footer{
+background-color: brown;
+grid-area: footer;
+}
+.subHeader{
+    display: flex;
+}

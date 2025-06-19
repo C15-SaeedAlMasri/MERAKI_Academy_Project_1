@@ -14,6 +14,7 @@ body{
 #header{
     background-color: aqua;
     grid-area: header;
+    
 
 }
 #main{
@@ -26,4 +27,71 @@ grid-area: footer;
 }
 .subHeader{
     display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction:row;
+    height: 70px;
 }
+#title{
+    justify-self: center;
+}
+#name{
+  
+    padding-right: 20px;
+    
+}
+#btnHeader{
+    padding-left: 20px;
+    margin-left: 20px;
+}
+.subFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction:row;
+    height: 70px;
+}
+#btnMusic{
+    padding-left: 20px;
+    margin-left: 20px;
+}
+#pages{
+    justify-self: center;
+}
+#btnHelp{
+padding-right: 20px;
+margin-right: 20px;
+}
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 50vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.question {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+  }
+  .answer {
+    padding: 10px 20px;
+    font-size: 16px;
+   
+  }
+  .next-button {
+    margin-top: 40px;
+    
+  }
+  #btnNext{
+    font-size: 25px;
+    width: 150px;
+  }

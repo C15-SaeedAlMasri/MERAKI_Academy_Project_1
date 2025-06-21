@@ -1,12 +1,19 @@
 body{
     text-align: center;
+    
 }
 .wlcomePage{
    
     height: 100vh;
-    background-color: #ff0000;
+    width: 100wh;
+    background-image: url("https://i.ytimg.com/vi/qPbS_mBFAkg/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCYI4rPgEZLOkjyDcB_E7rUK7UEPg");
     display: flex;
     flex-direction: column;
+    font-family: Arial, sans-serif;  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
     
    
 }
@@ -37,6 +44,7 @@ body{
     grid-template-rows: 1fr 8fr 1fr;
     grid-template-areas: "header" "main" "footer";
     display: none;
+    
     
  
 
@@ -100,6 +108,9 @@ margin-right: 20px;
   height: 50vh;
   padding: 20px;
   box-sizing: border-box;
+  
+ 
+  
 }
 .question {
     margin-bottom: 30px;
@@ -125,3 +136,29 @@ margin-right: 20px;
     font-size: 25px;
     width: 150px;
   }
+  .finished{
+    display: none;
+    background-image: url("https://t4.ftcdn.net/jpg/02/24/03/21/360_F_224032170_7PfrDJYWjCw4Rs1WFvhPkiSPuD02sw1q.jpg") ;
+    text-align: center;
+    
+    height: 100vh;
+    flex-direction: column;
+    font-family: Arial, sans-serif;  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+#last{
+    margin-top: 20px;
+}
+#cong{
+    padding-top: 200px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.forGame{
+    width: 35%;
+}

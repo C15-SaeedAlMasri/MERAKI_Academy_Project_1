@@ -33,7 +33,7 @@ const questions = [
         id: 6,
         q: "q6",
         answers:["6","6","6","saeed"],
-        correctAnswer: "5saeed" /*add more key/value if need*/,
+        correctAnswer: "saeed" /*add more key/value if need*/,
       },
       {
         id: 7,
@@ -62,9 +62,33 @@ const questions = [
   ];
   const questionDiv =document.querySelector(".question");
   const answersDiv =document.querySelector('.answers');
+  const pagesDiv = document.querySelector("#pages");
   const btnNex = document.querySelector('#btnNext');
+  const addscoure = document.createElement('h2');
+  const btnStart =document.querySelector('#startBtn');
+  const inputName =document.createElement('input');
+  const inpNameDiv = document.querySelector(".inpName");
+  const labelName= document.createElement('label');
+  const countainerDiv =document.querySelector('.countainer');
+  const welcomeDiv = document.querySelector('.wlcomePage');
+  const nameDiv =document.querySelector('#name');
   let counter =0;
+  let goodAnswer=0;
   
+  inputName.placeholder ="Please Enter Your Name";
+  inputName.style.height ="30px";
+  inpNameDiv.append(inputName);
+  nameDiv.append(labelName);
+
+ 
+  const startGame =()=>{
+   countainerDiv.style.display= "grid";
+   welcomeDiv.style.display="none";
+   labelName.innerText = "Player Name : " + inputName.value;
+   console.log(inputName.value)
+
+  }
+  btnStart.addEventListener('click',startGame);
   const randomQuestion =()=>{
     let oneAnswer =true;
     if(counter < 5){
@@ -81,16 +105,21 @@ const questions = [
     const answer =document.createElement('button');
     answer.innerText=Element;
     answersDiv.append(answer);
+    addscoure.innerText = goodAnswer +" OF 10";
     answer.addEventListener('click', ()=>{
         if(oneAnswer){
         if(answer.innerText ==questions[ind].correctAnswer){
             answer.style.backgroundColor ='green';
-            answer.disabled=false;
+            goodAnswer ++;
             oneAnswer=false;
+            console.log(goodAnswer)
+            addscoure.innerText = goodAnswer +" OF 10";
         }
         else{
             answer.style.backgroundColor ='red';
+            
             oneAnswer=false;
+            
         }
     }
     else{
@@ -98,6 +127,9 @@ const questions = [
     }
     })
     });
+    
+   
+    pagesDiv.append(addscoure);
     questions.splice(randomIndex,1);
     counter++;
 }

@@ -126,9 +126,14 @@ const questions = [
   }
  }
  btnMusic.addEventListener('click',funMusic);
- btnBack.addEventListener('click',funBack)
+ btnBack.addEventListener('click',funBack);
+
   const startGame =()=>{
-   countainerDiv.style.display= "grid";
+    if(inputName.value==''){
+      return;
+    }
+    else{
+        countainerDiv.style.display= "grid";
    welcomeDiv.style.display="none";
    labelName.innerText = "Player Name : " + inputName.value;
    console.log(inputName.value)
@@ -136,6 +141,8 @@ const questions = [
    funClean();
    
    randomQuestion();
+    }
+ 
   }
   btnStart.addEventListener('click',startGame);
 
@@ -157,6 +164,9 @@ const questions = [
     randomElement.answers.forEach((Element,ind)=>{
     const answer =document.createElement('button');
     answer.innerText=Element;
+    answer.style.height ="30px";
+    answer.style.borderRadius="30%"
+    answer.style.margin ="10px"
     answersDiv.append(answer);
     addscoure.innerText = goodAnswer +" OF 5";
     answer.addEventListener('click', (e)=>{

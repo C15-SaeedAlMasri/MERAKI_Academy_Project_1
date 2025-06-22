@@ -14,25 +14,36 @@ body{
     background-size: cover;
     background-position: center;
     color: white;
-    
+  
    
 }
-.forGame{
-    width: 20%;
-}
+
 #startBtn{
     align-self:center;
     width: 20%;
-    margin-top: 40px;
+    margin-top: 30px;
+    height: 40px;
+    background-color:rgb(99, 118, 239);;
    
 }
 .inpName{
-    width: 30%;
-    align-self:center;
     
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    font-size: 16px;
+    background: transparent;  
+    border: none;  
+    border-bottom: 2px solid #ccc;  
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+    align-self:center;
+   
 }
+
 .nameAndStart{
-    margin-top: 50px;
+   
     display: flex;
     flex-direction: column;
 }
@@ -44,24 +55,35 @@ body{
     grid-template-rows: 1fr 8fr 1fr;
     grid-template-areas: "header" "main" "footer";
     display: none;
+    background: rgba(0,0,0,0.5)
     
     
  
 
 }
 #header{
-    background-color: aqua;
+    background-color: #3778bf;
     grid-area: header;
-    
+   
+    background-color: #2e5ea1;
 
 }
+
 #main{
-    background-color: blue;
+    
     grid-area: main;
+   /* background-image: url("https://i.pinimg.com/474x/f9/3c/a8/f93ca855641d806be33db15a86be464c.jpg");*/
+   background: linear-gradient(135deg, #3778bf, #5a9bd4);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
 }
 #footer{
-background-color: brown;
+   
 grid-area: footer;
+background-color: #2e5ea1;
 }
 .subHeader{
     display: flex;
@@ -122,6 +144,7 @@ margin-right: 20px;
     gap: 10px;
     width: 100%;
     max-width: 400px;
+    
   }
   .answer {
     padding: 10px 20px;
@@ -131,10 +154,19 @@ margin-right: 20px;
   .next-button {
     margin-top: 40px;
     
+    
   }
   #btnNext{
     font-size: 25px;
     width: 150px;
+    background-color: #4558aa; /* Green */
+    border:none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
   }
   .finished{
     display: none;
@@ -160,5 +192,29 @@ margin-right: 20px;
     padding-right: 20px;
 }
 .forGame{
-    width: 35%;
+   align-self: center;
 }
+li {
+    text-indent: -5px;
+}
+.list{
+   
+    background-color: rgba(245, 245, 245, 0.422);;  
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    margin-left: 20px;
+    
+}
+ul{
+    list-style-position: inside;
+    padding-left: 1em; 
+    margin: 0;
+}
+li{
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: large;
+}
+ 

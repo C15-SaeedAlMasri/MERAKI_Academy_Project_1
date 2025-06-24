@@ -1,11 +1,22 @@
+* {
+    box-sizing: border-box;
+  }
 body{
     text-align: center;
-    
+    overflow-x: hidden; 
+    min-height: 100%;
+    bottom: 0;
+    height: 100%;
 }
+html { height: 100vh ;
+}
+ 
+  
+  
+
 .wlcomePage{
    
-    height: 100vh;
-    width: 100wh;
+    flex-wrap: wrap;
     background-image: url("https://i.ytimg.com/vi/qPbS_mBFAkg/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCYI4rPgEZLOkjyDcB_E7rUK7UEPg");
     display: flex;
     flex-direction: column;
@@ -14,17 +25,23 @@ body{
     background-size: cover;
     background-position: center;
     color: white;
+    bottom: 0;
+    
+    
   
    
 }
 
 #startBtn{
     align-self:center;
-    width: 20%;
+     
     margin-top: 30px;
     height: 40px;
-    background-color:rgb(99, 118, 239);;
-   
+    background-color: rgb(173, 210, 231);;
+    width: auto; 
+    padding: 10px 20px;
+    font-size: 16px;
+   color:black
 }
 .inpName{
     
@@ -46,6 +63,7 @@ body{
    
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .countainer{
@@ -62,7 +80,8 @@ body{
 
 }
 #header{
-    background-color: #3778bf;
+   /*background-color: #3778bf;*/
+   background-image: url("https://i.pinimg.com/736x/26/8e/f5/268ef5ad06a1f54ebb53948263491850.jpg");
     grid-area: header;
    
     background-color: #2e5ea1;
@@ -72,8 +91,8 @@ body{
 #main{
     
     grid-area: main;
-   /* background-image: url("https://i.pinimg.com/474x/f9/3c/a8/f93ca855641d806be33db15a86be464c.jpg");*/
-   background: linear-gradient(135deg, #3778bf, #5a9bd4);
+    background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3BmLTQxLWx1a2VzdGFja3Bvb2xlLWdyZWVubGFuZC1jYWJpbi0wMWEuanBn.jpg");
+  /* background: linear-gradient(135deg, #3778bf, #5a9bd4);*/
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -83,7 +102,8 @@ body{
 #footer{
    
 grid-area: footer;
-background-color: #2e5ea1;
+/*background-color: #2e5ea1;*/
+background-image: url("https://i.pinimg.com/736x/26/8e/f5/268ef5ad06a1f54ebb53948263491850.jpg");
 }
 .subHeader{
     display: flex;
@@ -94,6 +114,9 @@ background-color: #2e5ea1;
 }
 #title{
     justify-self: center;
+    color: white;
+    margin-left: 80px;
+   
 }
 #name{
   
@@ -101,8 +124,13 @@ background-color: #2e5ea1;
     
 }
 #btnHeader{
-    padding-left: 20px;
-    margin-left: 20px;
+    width: 0; 
+    height: 0; 
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid rgb(173, 210, 231);
+    background-color: #000000;
+    padding-left: 30px;
 }
 .subFooter{
     display: flex;
@@ -114,6 +142,12 @@ background-color: #2e5ea1;
 #btnMusic{
     padding-left: 20px;
     margin-left: 20px;
+    width: 100px;
+    text-align: center;
+    height: 40px;
+}
+.musicDiv{
+    
 }
 #pages{
     justify-self: center;
@@ -159,18 +193,19 @@ margin-right: 20px;
   #btnNext{
     font-size: 25px;
     width: 150px;
-    background-color: #4558aa; /* Green */
+    background-color:  rgb(173, 210, 231); ; /* Green */
     border:none;
-    color: white;
+    color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    
   }
   .finished{
     display: none;
-    background-image: url("https://t4.ftcdn.net/jpg/02/24/03/21/360_F_224032170_7PfrDJYWjCw4Rs1WFvhPkiSPuD02sw1q.jpg") ;
+    background-image: url("https://img.freepik.com/free-photo/stars-night-textured-backdrop_53876-96058.jpg?ga=GA1.1.1268223932.1750536210&semt=ais_hybrid&w=740") ;
     text-align: center;
     
     height: 100vh;
@@ -178,7 +213,9 @@ margin-right: 20px;
     font-family: Arial, sans-serif;  
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+   
+     
+    padding: 20px;
 
 }
 #last{
@@ -204,7 +241,7 @@ li {
     border-radius: 10px;
     max-width: 700px;
     margin: 20px auto;
-    margin-left: 20px;
+    
     
 }
 ul{
@@ -217,4 +254,56 @@ li{
     line-height: 1.6;
     font-size: large;
 }
- 
+@media (max-width: 800px) {
+    .wlcomePage {
+      padding-left: 20px;
+      padding-right: 20px;
+    
+    
+    }
+  }
+  
+  
+  
+  @media (min-width: 700px) and (max-width: 1025px) {
+    .wlcomePage {
+      height: 100vh;
+    text-align: center;
+    
+    padding-top: 20%;
+       
+    }
+  }
+  
+  @media (min-width: 700px) and (max-height: 900px) {
+    .wlcomePage {
+      width: 100%;
+     height: 100vh;
+     padding-left: 0;
+       bottom: 0;
+    }
+  }
+  @media (min-width: 1050px) {
+    .wlcomePage {
+      width: 100%;
+     height: 100%;
+      
+       
+    }
+  }
+  @media (max-width: 600px) {
+    .finished{
+        width: 100%;
+        height: 100vh;
+        padding-left: 20px;
+        padding-right: 20px;
+          bottom: 0;
+          font-size: small;
+      
+       
+    }
+    html{
+        height: 100%;
+        width: 100%;
+    }
+  }
